@@ -13,6 +13,61 @@ This project offers a simple backend API for assessing mental health using **PHQ
 
 ---
 
+## 🔗 API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/get-questions` | GET | Returns PHQ-9 and GAD-7 questions |
+| `/submit-answers` | POST | Accepts answers and echoes back |
+| `/analyze` | POST | Returns ML and LLM-based mental health insights |
+
+
+## 📤 Deploying to Render
+
+Push to GitHub
+
+Go to Render
+
+Create a new Web Service
+
+Set:
+
+Build Command: pip install -r requirements.txt
+
+Start Command: uvicorn main:app --host 0.0.0.0 --port 8000
+
+Environment Variable: API_KEY_GROQ=your_api_key_here
+
+## 🧠 Models Used
+
+### ML Models
+- Logistic Regression, XGBoost, Random Forest
+
+- Trained on vectorized PHQ-9 and GAD-7 answers
+
+### LLM
+- Mistral-24B via Groq
+
+- Provides reasoning, classification, tips, and recommendations
+
+## 📬 Example Input to /analyze 
+
+```bash
+{
+  "PHQ_9": {
+    "Little interest or pleasure in doing things": "Several days",
+    "Feeling down, depressed, or hopeless": "Several days",
+    "...": "..."
+  },
+  "GAD_7": {
+    "Feeling nervous, anxious, or on edge": "Several days",
+    "Not being able to stop or control worrying": "Several days",
+    "...": "..."
+  }
+}
+```
+
+
 ## 📦 Setup Locally
 
 ```bash
@@ -33,60 +88,4 @@ echo "API_KEY_GROQ=your_groq_api_key" > .env
 # Run the app
 uvicorn main:app --reload
 
----
-
-🔗 API Endpoints
-
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/get-questions` | GET | Returns PHQ-9 and GAD-7 questions |
-| `/submit-answers` | POST | Accepts answers and echoes back |
-| `/analyze` | POST | Returns ML and LLM-based mental health insights |
-
-
-📤 Deploying to Render
-Push to GitHub
-
-Go to Render
-
-Create a new Web Service
-
-Set:
-
-Build Command: pip install -r requirements.txt
-
-Start Command: uvicorn main:app --host 0.0.0.0 --port 8000
-
-Environment Variable: API_KEY_GROQ=your_api_key_here
-
-🧠 Models Used
-
-ML Models
-Logistic Regression, XGBoost, Random Forest
-
-Trained on vectorized PHQ-9 and GAD-7 answers
-
-LLM
-Mistral-24B via Groq
-
-Provides reasoning, classification, tips, and recommendations
-
-📬 Example Input to /analyze
-
-{
-  "PHQ_9": {
-    "Little interest or pleasure in doing things": "Several days",
-    "Feeling down, depressed, or hopeless": "Several days",
-    "...": "..."
-  },
-  "GAD_7": {
-    "Feeling nervous, anxious, or on edge": "Several days",
-    "Not being able to stop or control worrying": "Several days",
-    "...": "..."
-  }
-}
-
-🙏 Credits
-Developed using FastAPI, Groq API, and LangChain.
-
-ML models trained offline using sklearn and joblib.
+```
