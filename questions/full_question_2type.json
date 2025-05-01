@@ -1,0 +1,31 @@
+
+{
+    "PHQ-9": {
+        "title": "Patient Health Questionnaire-9 (PHQ-9)",
+        "questions": [
+            {"text": "Little interest or pleasure in doing things", "key": "phq9_q1"},
+            {"text": "Feeling down, depressed, or hopeless", "key": "phq9_q2"},
+            {"text": "Trouble falling or staying asleep, or sleeping too much", "key": "phq9_q3"},
+            {"text": "Feeling tired or having little energy", "key": "phq9_q4"},
+            {"text": "Poor appetite or overeating", "key": "phq9_q5"},
+            {"text": "Feeling bad about yourself—or that you are a failure or have let yourself or your family down", "key": "phq9_q6"},
+            {"text": "Trouble concentrating on things, such as reading the newspaper or watching television", "key": "phq9_q7"},
+            {"text": "Moving or speaking so slowly that other people could have noticed? Or the opposite—being so fidgety or restless that you have been moving around a lot more than usual", "key": "phq9_q8"},
+            {"text": "Thoughts that you would be better off dead or of hurting yourself in some way", "key": "phq9_q9"}
+        ],
+        "options": ["Not at all", "Several days", "More than half the days", "Nearly every day"]
+    },
+    "GAD-7": {
+        "title": "Generalized Anxiety Disorder-7 (GAD-7)",
+        "questions": [
+            {"text": "Feeling nervous, anxious, or on edge", "key": "gad7_q1"},
+            {"text": "Not being able to stop or control worrying", "key": "gad7_q2"},
+            {"text": "Worrying too much about different things", "key": "gad7_q3"},
+            {"text": "Trouble relaxing", "key": "gad7_q4"},
+            {"text": "Being so restless that it's hard to sit still", "key": "gad7_q5"},
+            {"text": "Becoming easily annoyed or irritable", "key": "gad7_q6"},
+            {"text": "Feeling afraid as if something awful might happen", "key": "gad7_q7"}
+        ],
+        "options": ["Not at all", "Several days", "More than half the days", "Nearly every day"]
+    }
+}

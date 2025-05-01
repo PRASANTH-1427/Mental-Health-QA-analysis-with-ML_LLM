@@ -1,0 +1,128 @@
+##------------------------trained model details for PHQ-9----------------------------------
+
+ Starting model training...
+
+🔍 Training RandomForest...
+📊 RandomForest Classification Report:
+               precision    recall  f1-score   support
+
+           1       1.00      0.41      0.58        22
+           2       0.73      0.89      0.80        96
+           3       0.71      0.73      0.72        71
+           4       1.00      0.09      0.17        11
+
+    accuracy                           0.73       200
+   macro avg       0.86      0.53      0.57       200
+weighted avg       0.77      0.73      0.71       200
+
+✅ RandomForest model saved as PHQ-9_RandomForest_model.pkl
+⏱️ RandomForest training time: 0.20 seconds
+
+🔍 Training LogisticRegression...
+📊 LogisticRegression Classification Report:
+               precision    recall  f1-score   support
+
+           1       1.00      1.00      1.00        22
+           2       1.00      1.00      1.00        96
+           3       0.95      1.00      0.97        71
+           4       1.00      0.64      0.78        11
+
+    accuracy                           0.98       200
+   macro avg       0.99      0.91      0.94       200
+weighted avg       0.98      0.98      0.98       200
+
+✅ LogisticRegression model saved as PHQ-9_LogisticRegression_model.pkl
+⏱️ LogisticRegression training time: 0.11 seconds
+
+🔍 Training XGBoost...
+C:\Users\CVHS\vsprograms\mental-health\mental-health-local\.venv\Lib\site-packages\xgboost\training.py:183: UserWarning: [18:18:08] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\learner.cc:738:
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+📊 XGBoost Classification Report:
+               precision    recall  f1-score   support
+
+           1       0.87      0.59      0.70        22
+           2       0.81      0.86      0.83        96
+           3       0.76      0.83      0.79        71
+           4       0.75      0.27      0.40        11
+
+    accuracy                           0.79       200
+   macro avg       0.79      0.64      0.68       200
+weighted avg       0.79      0.79      0.78       200
+
+✅ XGBoost model saved as PHQ-9_XGBoost_model.pkl
+⏱️ XGBoost training time: 0.25 seconds
+
+✅ All model training complete. 🕒 Total time: 0.56 seconds
+
+
+##------------------------trained model details for GAD-7----------------------------------
+
+🚀 Starting model training...
+
+🔍 Training RandomForest...
+C:\Users\CVHS\vsprograms\mental-health\mental-health-local\.venv\Lib\site-packages\sklearn\metrics\_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\CVHS\vsprograms\mental-health\mental-health-local\.venv\Lib\site-packages\sklearn\metrics\_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\CVHS\vsprograms\mental-health\mental-health-local\.venv\Lib\site-packages\sklearn\metrics\_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+📊 RandomForest Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00         2
+           1       0.90      0.84      0.87        73
+           2       0.81      0.95      0.88       106
+           3       1.00      0.42      0.59        19
+
+    accuracy                           0.85       200
+   macro avg       0.68      0.55      0.58       200
+weighted avg       0.85      0.85      0.84       200
+
+✅ RandomForest model saved as GAD-7_RandomForest_model.pkl
+⏱️ RandomForest training time: 0.17 seconds
+
+🔍 Training LogisticRegression...
+📊 LogisticRegression Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      0.50      0.67         2
+           1       0.99      1.00      0.99        73
+           2       1.00      1.00      1.00       106
+           3       1.00      1.00      1.00        19
+
+    accuracy                           0.99       200
+   macro avg       1.00      0.88      0.91       200
+weighted avg       1.00      0.99      0.99       200
+
+✅ LogisticRegression model saved as GAD-7_LogisticRegression_model.pkl
+⏱️ LogisticRegression training time: 0.05 seconds
+
+🔍 Training XGBoost...
+C:\Users\CVHS\vsprograms\mental-health\mental-health-local\.venv\Lib\site-packages\xgboost\training.py:183: UserWarning: [18:19:24] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\learner.cc:738:
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+C:\Users\CVHS\vsprograms\mental-health\mental-health-local\.venv\Lib\site-packages\sklearn\metrics\_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\CVHS\vsprograms\mental-health\mental-health-local\.venv\Lib\site-packages\sklearn\metrics\_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\CVHS\vsprograms\mental-health\mental-health-local\.venv\Lib\site-packages\sklearn\metrics\_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+📊 XGBoost Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00         2
+           1       0.88      0.88      0.88        73
+           2       0.85      0.93      0.89       106
+           3       1.00      0.53      0.69        19
+
+    accuracy                           0.86       200
+   macro avg       0.68      0.58      0.61       200
+weighted avg       0.86      0.86      0.86       200
+
+✅ XGBoost model saved as GAD-7_XGBoost_model.pkl
+⏱️ XGBoost training time: 0.18 seconds
+
+✅ All model training complete. 🕒 Total time: 0.41 seconds
