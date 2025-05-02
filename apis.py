@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Dict
 from src.ML_Model.load_ml_model import phq9_questions, gad7_questions, get_inference
 from src.LLM_Model.mistral_qroq import model_call
@@ -24,8 +24,12 @@ app.add_middleware(
 
 # Request format for answers
 class QARequest(BaseModel):
-    PHQ_9: Dict[str, str]
-    GAD_7: Dict[str, str]
+    PHQ_9: Dict[str, str] = Field(..., alias="PHQ-9")
+    GAD_7: Dict[str, str] = Field(..., alias="GAD-7")
+
+    class Config:
+        # This will allow you to use the aliases in the model
+        allow_population_by_field_name = True
 
 # ========== API 1: Get Questions ==========
 @app.get("/get-questions")

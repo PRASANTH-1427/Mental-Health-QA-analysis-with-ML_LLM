@@ -143,7 +143,7 @@ Your response must contain:
 - PHQ-9: Minimal (0–4), Mild (5–9), Moderate (10–14), Moderately severe (15–19), Severe (20–27)
 - GAD-7: Minimal (0–4), Mild (5–9), Moderate (10–14), Severe (15–21)
 
-2. **Reasoning** — Explain your classification in detail. Analyze each question's meaning and the user’s answer. Identify any red flags, even if the total score is low. Pay special attention to questions about suicidal thoughts or excessive anxiety.
+2. **Reasoning** — For both PHQ-9 and GAD-7, provide one thoughtful and clinically grounded paragraph each. Your explanation should interpret the user's responses holistically, not just numerically. Reflect on the overall pattern of their answers and describe how these reflect their emotional and mental health state. Do not present reasoning as key-value pairs per question. Instead, weave any important responses (e.g., lack of interest, restlessness, or suicidal thoughts) into a clear narrative. Highlight any concerning patterns or red flags, even if the overall score seems low.
 
 3. **Recommendation** — Suggest appropriate next steps based on the severity. Be cautious and responsible, especially if suicidal ideation or severe symptoms are present.
 
