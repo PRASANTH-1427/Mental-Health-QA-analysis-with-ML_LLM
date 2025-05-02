@@ -7,6 +7,12 @@ from src.LLM_Model.mistral_qroq import model_call
 
 app = FastAPI()
 
+# ✅ Add this route
+@app.get("/")
+def root():
+    return {"message": "API is live and running on Render!"}
+
+
 # Allow frontend (like Streamlit) to access the API
 app.add_middleware(
     CORSMiddleware,
