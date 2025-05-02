@@ -65,7 +65,7 @@ def resolve_path_from_root(*relative_parts):
     current_file = os.path.abspath(__file__)
     
     # Go up to project root — adjust levels if needed
-    project_root = os.path.abspath(os.path.join(current_file, "..", ".."))
+    project_root = os.path.abspath(os.path.join(current_file, ".."))
     print("project_root:- ",project_root)
     return os.path.join(project_root, *relative_parts)
 
@@ -73,11 +73,11 @@ def resolve_path_from_root(*relative_parts):
 def main():
     st.title("Mental Health Questionnaire")
 
-    # model_path = resolve_path_from_root("collected_QAs", "submission_2025-04-30_13-57-21.json")
-    # if model_path:
-    #     print("model_path :-",model_path)
+    model_path = resolve_path_from_root("questions", "full_question_2type.json")
+    if model_path:
+        print("model_path :-",model_path)
 
-    questionnaire_data = load_questionnaire(r"questions\full_question_2type.json")
+    questionnaire_data = load_questionnaire(model_path)
     questionnaire_keys = list(questionnaire_data.keys())
 
     if not questionnaire_keys:
