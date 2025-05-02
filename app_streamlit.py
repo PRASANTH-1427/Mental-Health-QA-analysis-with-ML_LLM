@@ -75,10 +75,13 @@ def main():
 
     model_path = resolve_path_from_root("questions", "full_question_2type.json")
     if model_path:
-        print("model_path :-",model_path)
-
-    questionnaire_data = load_questionnaire(model_path)
-    questionnaire_keys = list(questionnaire_data.keys())
+        # print("model_path :-",model_path)
+        questionnaire_data = load_questionnaire(model_path)
+        questionnaire_keys = list(questionnaire_data.keys())
+    else:
+        print('it came to else in the file path finding')
+        questionnaire_data = load_questionnaire(r"questions\full_question_2type.json")
+        questionnaire_keys = list(questionnaire_data.keys())
 
     if not questionnaire_keys:
         st.warning("No questionnaires available to display.")
